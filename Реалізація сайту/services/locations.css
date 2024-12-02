@@ -1,0 +1,354 @@
+h1 {
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+header{
+    background-color: #800000;
+}
+
+body{
+    background-color: #474745;
+}
+
+.menu{
+    font-size: 30px;
+    color: black;
+    display: inline-flex;
+    justify-content: center; 
+    text-decoration: none;
+    
+}
+
+.image{
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+a{
+    color: white;
+    text-decoration-line: none;
+    margin-right: 40px;
+    letter-spacing: 5px;
+   
+    
+}
+
+a:hover{
+    color: black;
+
+}
+
+footer{
+    background-color: #800000;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+}
+
+
+h6{
+    color: grey;
+    margin-bottom: 8px;
+    padding-top: 8px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 1px;
+    margin-top: 3px;
+    
+}
+h3{
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+/*.image-container {
+    position: relative;
+}*/
+
+
+.content{
+    padding-right: 220px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: normal;
+    letter-spacing: 5px;
+
+}
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: right;
+    padding: 20px;
+    height: 600px;
+    margin-bottom: -200px;
+  }
+  .image-container1 {
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: right;
+    padding: 20px;
+    height: 400px;
+  }
+  .image-container img {
+    flex: 1;
+    margin: 10px;
+    border-radius: 5%;
+}
+
+.image-container1 img {
+    flex: 1;
+    margin: 10px;
+    border-radius: 5%;
+}
+
+.img:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.img1:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.img2:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.img3:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.img4:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.img5:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.img {
+    width: 400px;
+    height: 400px;
+
+}
+.img1 {
+    width: 400px;
+    height: 400px;
+
+}
+.img2 {
+    width: 400px;
+    height: 400px;
+
+}
+.img3 {
+    width: 400px;
+    height: 400px;
+
+}
+.img4 {
+    width: 400px;
+    height: 400px;
+
+}
+.img5 {
+    width: 400px;
+    height: 400px;
+
+}
+.text-overlay:hover {
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out;
+
+}
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-365%, -30%);
+    color: white;
+    background-color: rgb(46, 50, 56);
+    padding: 20px;
+    opacity: 0.9;
+}
+.text-overlay1 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-200%, -30%);
+    color: white;
+    background-color: rgb(46, 50, 56);
+    padding: 20px;
+    opacity: 0.9;
+}
+.text-overlay2 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -30%);
+    color: white;
+    background-color: rgb(46, 50, 56);
+    padding: 20px;
+    opacity: 0.9;
+    
+}
+.text {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    background-position: center;
+}
+.text-overlay3 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-365%, 410px);
+    color: white;
+    background-color: rgb(46, 50, 56);
+    padding: 20px;
+    opacity: 0.9;
+}
+.text-overlay4 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-200%, 410px);
+    color: white;
+    background-color: rgb(46, 50, 56);
+    padding: 20px;
+    opacity: 0.9;
+}
+.text-overlay5 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, 410px);
+    color: white;
+    background-color: rgb(46, 50, 56);
+    padding: 20px;
+    opacity: 0.9;
+}
+h1 {
+    color: blue;
+    animation: colorChange 3s infinite alternate;
+  }
+  
+  @keyframes colorChange {
+    0% {
+      color: #ff0000;
+    }
+    50% {
+      color: rgb(0, 0, 0);
+    }
+    100% {
+      color: #474745;
+    }
+  }
+h2 {
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+h2 {
+    color: blue;
+    animation: colorChange 3s infinite alternate;
+  }
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+.card-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+.card-subtitle {
+    margin-top: 10px;
+}
+.card-image {
+    width: 300px;
+    height: 200px;
+}
+.card1 {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    
+}
+.card3 {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    
+}
+.card4 {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    
+}
+.card1 {
+    /* Стилі для кожної картки */
+    flex: 1; /* Займає рівну частину доступного простору */
+  }
+.card-container {
+    display: flex;
+    justify-content: space-between; /* або center, space-around тощо */
+  }
+  
+  .card {
+    /* Стилі для кожної картки */
+    flex: 1; /* Займає рівну частину доступного простору */
+  }
+  .card2 {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    
+}
+.card2 {
+    /* Стилі для кожної картки */
+    flex: 1; /* Займає рівну частину доступного простору */
+  }
+.card-container1 {
+    display: flex;
+    justify-content: space-between; /* або center, space-around тощо */
+  }
+  .card3 {
+    /* Стилі для кожної картки */
+    flex: 1; /* Займає рівну частину доступного простору */
+  }
+  .card4 {
+    /* Стилі для кожної картки */
+    flex: 1; /* Займає рівну частину доступного простору */
+  }
+  .card-image:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}

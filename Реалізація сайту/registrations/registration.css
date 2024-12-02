@@ -1,0 +1,120 @@
+header{
+    background-color: #800000;
+}
+
+body{
+    background-color: #474745;
+}
+
+.menu{
+    font-size: 30px;
+    color: black;
+    display: inline-flex;
+    justify-content: center; 
+    text-decoration: none;
+    text-shadow: 2px 2px 4px black;
+    
+}
+
+.image{
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+a{
+    color: white;
+    text-decoration-line: none;
+    margin-right: 40px;
+    letter-spacing: 5px;
+   
+    
+}
+
+a:hover{
+    color: black;
+
+}
+footer{
+    background-color: #800000;
+}
+
+h6{
+    color: grey;
+    margin-bottom: 8px;
+    padding-top: 8px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 1px;
+    margin-top: 3px;
+    
+}
+h3{
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+
+.name1 {
+    font-family:inherit;
+    font-size: 55px;
+    color: black;
+    padding-right: 220px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.form {
+    position: absolute; /* Робимо форму абсолютно позиційованою */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Прозорий білий фон */
+    padding: 20px;
+    border-radius: 5px;
+   display: table-column;
+  }
+  .text-overlay {
+    font-size: 45px;
+    font-family: fantasy;
+    color: black;
+    position: absolute; /* Робимо текст абсолютно позиційованим */
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0); /* Колір тексту (можна змінити) */
+    text-align: center; /* Центруємо текст по горизонталі */
+    text-shadow: 2px 2px 4px #888;
+  }
+  .image-container1 {
+    background-image: url('registr.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: right;
+    padding: 20px;
+    height: 600px;
+
+}
+.button{
+    background-color: black;
+  color:#800000;
+  padding: 2px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  cursor: pointer; 
+  font-family: fantasy;
+  margin-right: 220px;
+  box-shadow:#474745;
+  border-radius: 20px;
+  margin-top: 100px;
+  position: absolute; /* Робимо текст абсолютно позиційованим */
+  top: 70%;
+  left: 40%;
+}

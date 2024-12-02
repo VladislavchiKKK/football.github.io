@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Особистий кабінет</title>
+    <link rel="stylesheet" href="personal-account.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="menu">
+           <img  class="image" src="C:\Users\ACER\Desktop\Реалізація сайту\фотографії\gym1.png" alt="icon">
+            <a href="C:\Users\ACER\Desktop\Реалізація сайту\index\index.html#event">Події</a>
+            <a href="C:\Users\ACER\Desktop\Реалізація сайту\trainers\trainers.html">Тренери</a>
+            <a href="C:\Users\ACER\Desktop\Реалізація сайту\analytic\analytic.html">Аналітика</a>
+            <a href="C:\Users\ACER\Desktop\Реалізація сайту\abonements\abonements.html">Абонементи</a>
+            <a href="C:\Users\ACER\Desktop\Реалізація сайту\services\locations.html#section">Послуги</a>
+            <a href="C:\Users\ACER\Desktop\Реалізація сайту\services\locations.html">Локації</a>
+            <a href="C:\Users\ACER\Desktop\Реалізація сайту\index\index.html">
+                <img class="image" src="C:\Users\ACER\Desktop\Реалізація сайту\фотографії\home.png" alt="Головна сторінка">
+              </a>
+           <a href="C:\Users\ACER\Desktop\Реалізація сайту\personal-account\personal-account.html">
+                <img class="image" src="C:\Users\ACER\Desktop\Реалізація сайту\фотографії\person.png" alt="Особистий кабінет">
+              </a>
+            </div>
+    </nav>
+    </header>
+
+    <div class="container">
+        <h2>Моя інформація</h2>
+        <div class="profile-info" id="profileInfo"></div>
+
+        <h2>Запис на тренування</h2>
+        <div id="trainingInfo"></div>
+
+        <div class="form-section">
+            <h3>Записатись на тренування</h3>
+            <form id="trainingForm">
+                <select id="trainingType" required>
+                    <option value="">Оберіть тип тренування</option>
+                    <option value="Кардіо">Кардіо</option>
+                    <option value="Силові тренування">Силові тренування</option>
+                    <option value="Йога">Йога</option>
+                </select>
+                <input type="date" id="trainingDate" required>
+                <input type="time" id="trainingTime" required>
+                <select id="trainerSelect" required>
+                    <option value="">Оберіть тренера</option>
+                    <option value="Тренер 1">Тренер 1</option>
+                    <option value="Тренер 2">Тренер 2</option>
+                    <option value="Тренер 3">Тренер 3</option>
+                </select>
+                <button type="submit">Записатись</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+        <div class="contacts">
+        <h3 class="communication">Будьте з нами на звязку:</h3>
+        <h6>Контакти: +3806854545454</h6>
+        <h6>Адреcа: traininggym@gmail.com</h6>
+    </div>
+    <div class="address">
+        <h3 class="my-address">Наша адреса</h3>
+        <h6>м.Вінниця, вул.Келецька 98</h6>
+    </div>
+</div>
+    </footer>
+
+    <script>
+        class User {
+            constructor(id, name, surname, email, phone, date) {
+                this.id = id;
+                this.name = name;
+                this.surname = surname;
+                this.email = email;
+                this.phone = phone;
+                this.date = date;
+            }
+
+            static getStoredUser() {
+                const data = JSON.parse(localStorage.getItem('userRegistration'));
+                return data ? new User(data.id, data.name, data.surname, data.email, data.phone, data.date) : null;
+            }
+
+            save() {
+                localStorage.setItem('userRegistration', JSON.stringify(this));
+            }
+
+            static createNewUser() {
+                const user = new User(User.generateID(), 'Ім\'я', 'Прізвище', 'email@example.com', '000-000-0000', new Date().toLocaleDateString());
+                user.save();
+                return user;
+            }
+
+            static generateID() {
+                return Math.floor(Math.random() * 1000000);
+            }
+        }
+
+        class Registration {
+            constructor(clientID, clientName, clientSurname, clientEmail, trainingType, date, time, trainer) {
+                this.clientID = clientID;
+                this.clientName = clientName;
+                this.clientSurname = clientSurname;
+                this.clientEmail = clientEmail;
+                this.trainingType = trainingType;
+                this.date = date;
+                this.time = time;
+                this.trainer = trainer;
+            }
+
+            static getAll() {
+                return JSON.parse(localStorage.getItem('registrations')) || [];
+            }
+
+            save() {
+                const registrations = Registration.getAll();
+                registrations.push(this);
+                localStorage.setItem('registrations', JSON.stringify(registrations));
+            }
+
+            static delete(index) {
+                const registrations = Registration.getAll();
+                registrations.splice(index, 1);
+                localStorage.setItem('registrations', JSON.stringify(registrations));
+            }
+        }
+
+        function displayUserProfile(user) {
+            document.getElementById('profileInfo').innerHTML = `
+                <p><strong>Ім'я:</strong> ${user.name} ${user.surname}</p>
+                <p><strong>Email:</strong> ${user.email}</p>
+                <p><strong>Телефон:</strong> ${user.phone}</p>
+                <p><strong>Дата реєстрації:</strong> ${user.date}</p>
+            `;
+        }
+
+        function displayTrainingInfo(email) {
+            const userRegistrations = Registration.getAll().filter(reg => reg.clientEmail === email);
+            let html = userRegistrations.length > 0 
+                ? `<table><tr><th>Тип тренування</th><th>Дата</th><th>Час</th><th>Тренер</th><th>Дія</th></tr>`
+                : `<h3 class="empty-table">У вас немає записів на тренування.</h3>`;
+
+            userRegistrations.forEach((reg, index) => {
+                html += `<tr>
+                    <td>${reg.trainingType}</td>
+                    <td>${reg.date}</td>
+                    <td>${reg.time}</td>
+                    <td>${reg.trainer}</td>
+                    <td><button onclick="deleteRegistration(${index})">Видалити</button></td>
+                </tr>`;
+            });
+            html += userRegistrations.length > 0 ? `</table>` : '';
+            document.getElementById('trainingInfo').innerHTML = html;
+        }
+
+        function registerForTraining(event) {
+            event.preventDefault();
+            const trainingType = document.getElementById('trainingType').value;
+            const trainingDate = document.getElementById('trainingDate').value;
+            const trainingTime = document.getElementById('trainingTime').value;
+            const trainer = document.getElementById('trainerSelect').value;
+
+            if (trainingType && trainingDate && trainingTime && trainer) {
+                const user = User.getStoredUser();
+                const registration = new Registration(user.id, user.name, user.surname, user.email, trainingType, trainingDate, trainingTime, trainer);
+                registration.save();
+                displayTrainingInfo(user.email);
+            } else {
+                alert('Будь ласка, заповніть всі поля!');
+            }
+        }
+
+        function deleteRegistration(index) {
+            Registration.delete(index);
+            const user = User.getStoredUser();
+            displayTrainingInfo(user.email);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let user = User.getStoredUser();
+            if (!user) user = User.createNewUser();
+            displayUserProfile(user);
+            displayTrainingInfo(user.email);
+            document.getElementById('trainingForm').addEventListener('submit', registerForTraining);
+        });
+    </script>
+</body>
+</html>

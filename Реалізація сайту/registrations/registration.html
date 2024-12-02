@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration</title>
+        <link rel="stylesheet" href="registration.css">
+        <script src="registration.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+            <div class="menu">
+               <img  class="image" src="C:\Users\ACER\Desktop\Реалізація сайту\фотографії\gym1.png" alt="icon">
+                <a href="C:\Users\ACER\Desktop\Реалізація сайту\index\index.html#event">Події</a>
+                <a href="C:\Users\ACER\Desktop\Реалізація сайту\trainers\trainers.html">Тренери</a>
+                <a href="C:\Users\ACER\Desktop\Реалізація сайту\analytic\analytic.html">Аналітика</a>
+                <a href="C:\Users\ACER\Desktop\Реалізація сайту\abonements\abonements.html">Абонементи</a>
+                <a href="C:\Users\ACER\Desktop\Реалізація сайту\services\locations.html#section">Послуги</a>
+                <a href="C:\Users\ACER\Desktop\Реалізація сайту\services\locations.html">Локації</a>
+                <a href="C:\Users\ACER\Desktop\Реалізація сайту\index\index.html">
+                    <img class="image" src="C:\Users\ACER\Desktop\Реалізація сайту\фотографії\home.png" alt="Головна сторінка">
+                  </a>
+               <a href="C:\Users\ACER\Desktop\Реалізація сайту\personal-account\personal-account.html">
+                    <img class="image" src="C:\Users\ACER\Desktop\Реалізація сайту\фотографії\person.png" alt="Особистий кабінет">
+                  </a>
+                </div>
+        </nav>
+        </header>
+    <main>
+        <div class="image-container1">
+            <div class="text-overlay">
+                Ласкаво просимо!
+            </div>
+            <form class="form" onsubmit="registerUser(); return false">
+
+            <label for="name">Ім'я:</label>
+            <input placeholder="Ім'я" type="text" id="name" name="name" required oninput="validateLetters(event)">
+            <br><br>
+            <label for="surname">Прізвище:</label>
+            <input placeholder="Прізвище" type="text" id="surname" name="surname" required oninput="validateLetters(event)">
+            <br><br>
+            <label for="email">Email:</label>
+            <input placeholder="Email" type="email" id="email" name="email" required>
+            <br><br>
+            <label for="password">Пароль:</label>
+            <input placeholder="Пароль" type="password" id="password" required minlength="6">
+            <br><br>
+            <label for="phone">Телефон:</label>
+            <input placeholder="+38 (0XX) XXX-XX-XX" type="tel" id="phone" name="phone" required oninput="validatePhoneInput(event)" minlength="13" maxlength="13">
+            <br><br>
+            <label for="date">Дата народження:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit" class="button">Зареєструватись</button>
+        </form>
+    </div>
+</main>
+
+
+
+    <footer>
+        <div class="conteiner">
+            <div class="col">
+        <h3>Будьте з нами на звязку:</h3>
+        <h6>Контакти: +3806854545454</h6>
+        <h6>Адреcа: traininggym@gmail.com</h6>
+    </div>
+    <div class="col">
+        <h3>Наша адреса</h3>
+        <h6>м.Вінниця, вул.Келецька 98</h6>
+    </div>
+    </div>
+    </footer>
+</body>
+</html>
